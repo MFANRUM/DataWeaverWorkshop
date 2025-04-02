@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: service-scheduler-first
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.3.135:8848
