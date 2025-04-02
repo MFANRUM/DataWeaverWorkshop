@@ -1,7 +1,13 @@
 spring:
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
   application:
     name: service-sender-first
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.3.135:8848
+  config:
+    import:
+      - optional:nacos:config-sender.yaml?refreshEnabled=true

@@ -3,11 +3,11 @@ spring:
     charset: UTF-8
     location: classpath:banner.txt
   application:
-    name: service-generator-first
+    name: service-monitor-first
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.3.135:8848
   config:
     import:
-      - optional:nacos:config-generator.yaml?refreshEnabled=true
+      - optional:nacos:config-monitor.yaml?refreshEnabled=true

@@ -1,7 +1,19 @@
 spring:
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
   application:
     name: service-scheduler-first
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.3.135:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mf_scheduler?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: admin
+    password: admin_000
+
+  config:
+    import:
+      - optional:nacos:config-scheduler.yaml?refreshEnabled=true
